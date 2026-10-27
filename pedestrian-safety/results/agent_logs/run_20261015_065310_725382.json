@@ -1,0 +1,96 @@
+{
+  "answer": "RISK: \ud83d\udfe2 Normal\nSITUATION: Sensor model forecasts High for the next hour. Crowd is 1.2x the usual level for this time.\nEVIDENCE:\n- Sensor QVN_T at 2026-08-12 13:00: forecast High (P(Very High) = 14%); usual 2364 people/hour, last hour 2818.\nACTIONS:\n- Continue routine monitoring.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-4",
+        "when": "2026-08-12 13:00"
+      },
+      "result": {
+        "sensor": "QVN_T",
+        "forecast_for_hour": "2026-08-12 13:00",
+        "weekday": "Wednesday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "High",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.045,
+          "High": 0.816,
+          "Very High": 0.139
+        },
+        "p_very_high": 0.139,
+        "warning_threshold": 0.2,
+        "early_warning": false,
+        "usual_people_this_hour": 2364.0,
+        "very_high_line_people_per_hour": 3079.75,
+        "people_1h_before": 2818.0,
+        "people_2h_before": 1750.0,
+        "people_3h_before": 1148.0,
+        "same_hour_last_week": 2097.0,
+        "last_hour_vs_usual": 1.234,
+        "last_hour_level": "High",
+        "event": null,
+        "public_holiday": null,
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null,
+        "forecast_level": "High",
+        "p_very_high": 0.139,
+        "surge_ratio": 1.23
+      },
+      "result": {
+        "risk_level": "Normal",
+        "icon": "\ud83d\udfe2",
+        "risk_code": 0,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts High for the next hour.",
+          "Crowd is 1.2x the usual level for this time."
+        ],
+        "actions": [
+          "Continue routine monitoring."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": "High",
+          "p_very_high": 0.139,
+          "surge_ratio": 1.23
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Normal",
+    "icon": "\ud83d\udfe2",
+    "risk_code": 0,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts High for the next hour.",
+      "Crowd is 1.2x the usual level for this time."
+    ],
+    "actions": [
+      "Continue routine monitoring."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": "High",
+      "p_very_high": 0.139,
+      "surge_ratio": 1.23
+    }
+  },
+  "question": "Should we send extra staff to CAM-4 at 2026-08-12 13:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": null,
+  "seconds": 92.1
+}

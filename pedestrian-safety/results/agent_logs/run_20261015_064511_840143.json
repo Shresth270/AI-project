@@ -1,0 +1,100 @@
+{
+  "answer": "RISK: \ud83d\udfe1 Watch\nSITUATION: Sensor model forecasts a Very High crowd in the next hour (probability 30%). Crowd is 1.3x the usual level for this time.\nEVIDENCE:\n- Sensor Swa123_T at 2026-09-25 12:00: forecast High (P(Very High) = 30%); usual 3207 people/hour, last hour 3128.\nACTIONS:\n- Send extra staff to the location and keep the camera under watch.\n- Prepare crowd barriers and announce alternative routes.\n- Re-check the camera every 10-15 minutes.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-1",
+        "when": "2026-09-25 12:00"
+      },
+      "result": {
+        "sensor": "Swa123_T",
+        "forecast_for_hour": "2026-09-25 12:00",
+        "weekday": "Friday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "High",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.04,
+          "High": 0.664,
+          "Very High": 0.296
+        },
+        "p_very_high": 0.296,
+        "warning_threshold": 0.2,
+        "early_warning": true,
+        "usual_people_this_hour": 3207.0,
+        "very_high_line_people_per_hour": 3864.75,
+        "people_1h_before": 3128.0,
+        "people_2h_before": 1956.0,
+        "people_3h_before": 1522.0,
+        "same_hour_last_week": 2897.0,
+        "last_hour_vs_usual": 1.323,
+        "last_hour_level": "High",
+        "event": "AFL Grand Final parade",
+        "public_holiday": "Friday before the AFL Grand Final",
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null,
+        "forecast_level": "High",
+        "p_very_high": 0.296,
+        "surge_ratio": 1.32
+      },
+      "result": {
+        "risk_level": "Watch",
+        "icon": "\ud83d\udfe1",
+        "risk_code": 1,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts a Very High crowd in the next hour (probability 30%).",
+          "Crowd is 1.3x the usual level for this time."
+        ],
+        "actions": [
+          "Send extra staff to the location and keep the camera under watch.",
+          "Prepare crowd barriers and announce alternative routes.",
+          "Re-check the camera every 10-15 minutes."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": "High",
+          "p_very_high": 0.296,
+          "surge_ratio": 1.32
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Watch",
+    "icon": "\ud83d\udfe1",
+    "risk_code": 1,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts a Very High crowd in the next hour (probability 30%).",
+      "Crowd is 1.3x the usual level for this time."
+    ],
+    "actions": [
+      "Send extra staff to the location and keep the camera under watch.",
+      "Prepare crowd barriers and announce alternative routes.",
+      "Re-check the camera every 10-15 minutes."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": "High",
+      "p_very_high": 0.296,
+      "surge_ratio": 1.32
+    }
+  },
+  "question": "Give me the crowd risk for CAM-1 at 2026-09-25 12:00.",
+  "image_path": null,
+  "camera_id": null,
+  "when": null,
+  "seconds": 0.0
+}

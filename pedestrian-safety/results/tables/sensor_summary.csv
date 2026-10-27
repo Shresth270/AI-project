@@ -1,0 +1,6 @@
+level_name,test,train,share_train
+Low,80790,300631,0.252
+Medium,148380,596497,0.499
+High,58403,237994,0.199
+Very High,14821,59497,0.05
+TOTAL,302394,1194619,1.0

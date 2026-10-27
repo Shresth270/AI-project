@@ -1,0 +1,9 @@
+{
+  "scenarios": 20,
+  "fell_back_to_offline": "n/a",
+  "tool_selection_correct": "80% (16/20)",
+  "risk_level_consistent_with_assess_risk": "100% (20/20)",
+  "risk_level_matches_reference_plan": "100% (13/13)",
+  "numbers_grounded": "100% of 115",
+  "avg_seconds": 2.7
+}

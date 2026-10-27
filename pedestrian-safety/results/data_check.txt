@@ -1,0 +1,47 @@
+======================================================================
+WIDERPERSON
+======================================================================
+Root folder      : C:\Users\shres\Desktop\ARTIFICIAL\pedestrian-safety\data\widerperson
+Images           : 13,382
+Annotation files : 9,000
+train.txt        : 8,000 ids (e.g. 000040)
+val.txt          : 1,000 ids (e.g. 000041)
+test.txt         : 4,382 ids (e.g. 000043)
+Boxes per label  :
+   1 pedestrians          178,593
+   2 riders                 1,659
+   3 partially-visible     79,934
+   4 ignore regions         3,649
+   5 crowd                  9,640
+Box width  median/p10/p90 : 29 / 12 / 79 px
+Box height median/p10/p90 : 62 / 19 / 178 px
+Boxes smaller than 24 px  : 110,579 (40%)
+Sample annotation file:
+   35
+   1 45 235 79 318
+   1 60 209 120 356
+   1 119 214 168 336
+
+======================================================================
+MELBOURNE PEDESTRIAN COUNTING
+======================================================================
+File   : pedestrian-count.csv  (127.1 MB)
+Columns (9):
+   id                           int64     e.g. 2120261012
+   location_id                  int64     e.g. 2
+   sensing_date                 str       e.g. 2026-10-12
+   hourday                      int64     e.g. 1
+   direction_1                  int64     e.g. 12
+   direction_2                  int64     e.g. 21
+   pedestriancount              int64     e.g. 33
+   sensor_name                  str       e.g. Bou283_T
+   location                     str       e.g. -37.81380668, 144.96516718
+Rows       : 1,625,754
+Date column: sensing_date  range 2024-10-13 00:00:00 -> 2026-10-12 00:00:00
+Sensor col : location_id  unique sensors 103
+Missing    : {'sensor_name': 20801, 'location': 20801}
+First 3 rows:
+            id  location_id sensing_date  hourday  direction_1  direction_2  pedestriancount sensor_name                    location
+0   2120261012            2   2026-10-12        1           12           21               33    Bou283_T  -37.81380668, 144.96516718
+1  48320261012           48   2026-10-12        3            0            1                1      QVMQ_T  -37.80631581, 144.95866697
+2  27120261012           27   2026-10-12        1            2            8               10       Vic_T  -37.80606888, 144.95644692

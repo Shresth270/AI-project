@@ -1,0 +1,21 @@
+id,note,mode,tools_called,tools_ok,missing,unexpected,risk_reported,risk_consistent,risk_correct,numbers_in_answer,numbers_ungrounded,ungrounded_values,seconds
+S01,Grand Final parade morning,offline plan,forecast_footfall > assess_risk,True,,,Normal,True,True,3,0,,0.1
+S02,Grand Final parade peak,offline plan,forecast_footfall > assess_risk,True,,,Watch,True,True,7,0,,0.0
+S03,Grand Final day,offline plan,forecast_footfall > assess_risk,True,,,Normal,True,True,3,0,,0.0
+S04,"quiet night, weekday",offline plan,forecast_footfall > assess_risk,True,,,Normal,True,,3,0,,0.0
+S05,ordinary weekday lunch,offline plan,forecast_footfall > assess_risk,True,,,Normal,True,True,4,0,,0.0
+S06,ordinary Saturday afternoon,offline plan,forecast_footfall > assess_risk,True,,,Normal,True,True,3,0,,0.0
+S07,recent Sunday evening,offline plan,forecast_footfall > assess_risk,True,,,Watch,True,True,7,0,,0.0
+S08,two locations,offline plan,forecast_footfall > assess_risk,True,,,Normal,True,,3,0,,0.0
+S09,,offline plan,forecast_footfall > assess_risk,False,get_baseline,,Watch,True,,7,0,,0.0
+S10,planning mode + event,offline plan,forecast_footfall > assess_risk,True,,,Normal,True,True,3,0,,0.0
+S11,"planning mode, normal day",offline plan,forecast_footfall > assess_risk,True,,,Normal,True,,3,0,,0.0
+S12,,offline plan,assess_risk,False,get_events,assess_risk,Normal,True,,0,0,,0.0
+S13,,offline plan,assess_risk,False,list_locations,assess_risk,Normal,True,,0,0,,0.0
+S14,unclear location -> should list locations first,offline plan,assess_risk,False,list_locations,,Normal,True,,0,0,,0.0
+S15,crowded image,offline plan,detect_people > classify_people > forecast_footfall > assess_risk,True,,,Normal,True,True,11,0,,16.2
+S16,crowded image,offline plan,detect_people > classify_people > forecast_footfall > assess_risk,True,,,Normal,True,True,11,0,,10.9
+S17,crowded image + sensor time,offline plan,detect_people > classify_people > forecast_footfall > assess_risk,True,,,Watch,True,True,14,0,,9.9
+S18,crowded image + sensor time,offline plan,detect_people > classify_people > forecast_footfall > assess_risk,True,,,Normal,True,True,11,0,,2.7
+S19,crowded image,offline plan,detect_people > classify_people > forecast_footfall > assess_risk,True,,,Normal,True,True,11,0,,9.6
+S20,crowded image + sensor time,offline plan,detect_people > classify_people > forecast_footfall > assess_risk,True,,,Normal,True,True,11,0,,5.2

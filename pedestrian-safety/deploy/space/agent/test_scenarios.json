@@ -1,0 +1,310 @@
+[
+  {
+    "id": "S01",
+    "question": "Will CAM-1 be dangerously crowded at 2026-09-25 10:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "Grand Final parade morning"
+  },
+  {
+    "id": "S02",
+    "question": "Give me the crowd risk for CAM-1 at 2026-09-25 12:00.",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "Grand Final parade peak"
+  },
+  {
+    "id": "S03",
+    "question": "Is CAM-2 safe at 2026-09-26 15:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "Grand Final day"
+  },
+  {
+    "id": "S04",
+    "question": "How busy will CAM-3 be at 2026-07-14 03:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "quiet night, weekday"
+  },
+  {
+    "id": "S05",
+    "question": "Should we send extra staff to CAM-4 at 2026-08-12 13:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "ordinary weekday lunch"
+  },
+  {
+    "id": "S06",
+    "question": "Crowd risk at CAM-5 for 2026-06-13 14:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "ordinary Saturday afternoon"
+  },
+  {
+    "id": "S07",
+    "question": "Is anything unusual expected at CAM-6 at 2026-10-11 18:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "recent Sunday evening"
+  },
+  {
+    "id": "S08",
+    "question": "Compare the forecast for CAM-1 and CAM-2 at 2026-09-25 11:00.",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "two locations"
+  },
+  {
+    "id": "S09",
+    "question": "What is normal for CAM-3 on a Friday at 17:00, and what is forecast for 2026-09-25 17:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "get_baseline",
+      "forecast_footfall"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": ""
+  },
+  {
+    "id": "S10",
+    "question": "We are planning New Year's Eve: how risky will CAM-1 be at 2026-12-31 22:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "planning mode + event"
+  },
+  {
+    "id": "S11",
+    "question": "Plan ahead: crowd level at CAM-2 on 2026-11-15 12:00?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "forecast_footfall"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "planning mode, normal day"
+  },
+  {
+    "id": "S12",
+    "question": "What events or holidays are on 2026-09-25?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "get_events"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk"
+    ],
+    "note": ""
+  },
+  {
+    "id": "S13",
+    "question": "Which cameras can you monitor?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "list_locations"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people",
+      "forecast_footfall",
+      "assess_risk"
+    ],
+    "note": ""
+  },
+  {
+    "id": "S14",
+    "question": "How crowded is the main station camera right now?",
+    "image": null,
+    "camera": null,
+    "when": null,
+    "must_call": [
+      "list_locations"
+    ],
+    "must_not_call": [
+      "detect_people",
+      "classify_people"
+    ],
+    "note": "unclear location -> should list locations first"
+  },
+  {
+    "id": "S15",
+    "question": "Check this camera image and tell me the risk.",
+    "image": "auto:1",
+    "camera": "CAM-1",
+    "when": null,
+    "must_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk"
+    ],
+    "must_not_call": [],
+    "note": "crowded image"
+  },
+  {
+    "id": "S16",
+    "question": "Check this camera image and tell me the risk.",
+    "image": "auto:2",
+    "camera": "CAM-2",
+    "when": null,
+    "must_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk"
+    ],
+    "must_not_call": [],
+    "note": "crowded image"
+  },
+  {
+    "id": "S17",
+    "question": "Check this camera image and tell me the risk.",
+    "image": "auto:3",
+    "camera": "CAM-3",
+    "when": "2026-09-25 12:00",
+    "must_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk",
+      "forecast_footfall"
+    ],
+    "must_not_call": [],
+    "note": "crowded image + sensor time"
+  },
+  {
+    "id": "S18",
+    "question": "Check this camera image and tell me the risk.",
+    "image": "auto:4",
+    "camera": "CAM-4",
+    "when": "2026-07-14 03:00",
+    "must_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk",
+      "forecast_footfall"
+    ],
+    "must_not_call": [],
+    "note": "crowded image + sensor time"
+  },
+  {
+    "id": "S19",
+    "question": "Check this camera image and tell me the risk.",
+    "image": "auto:5",
+    "camera": "CAM-5",
+    "when": null,
+    "must_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk"
+    ],
+    "must_not_call": [],
+    "note": "crowded image"
+  },
+  {
+    "id": "S20",
+    "question": "Check this camera image and tell me the risk.",
+    "image": "auto:6",
+    "camera": "CAM-6",
+    "when": "2026-09-26 15:00",
+    "must_call": [
+      "detect_people",
+      "classify_people",
+      "assess_risk",
+      "forecast_footfall"
+    ],
+    "must_not_call": [],
+    "note": "crowded image + sensor time"
+  }
+]

@@ -1,0 +1,26 @@
+date,event_name,event_type,start_hour,end_hour
+2023-01-01,New Year's Eve (after midnight),celebration,0,2
+2023-09-29,AFL Grand Final parade,sport,8,18
+2023-09-30,AFL Grand Final day,sport,10,21
+2023-12-26,Boxing Day sales,shopping,8,20
+2023-12-31,New Year's Eve,celebration,17,23
+2024-01-01,New Year's Eve (after midnight),celebration,0,2
+2024-09-27,AFL Grand Final parade,sport,8,18
+2024-09-28,AFL Grand Final day,sport,10,21
+2024-12-26,Boxing Day sales,shopping,8,20
+2024-12-31,New Year's Eve,celebration,17,23
+2025-01-01,New Year's Eve (after midnight),celebration,0,2
+2025-09-26,AFL Grand Final parade,sport,8,18
+2025-09-27,AFL Grand Final day,sport,10,21
+2025-12-26,Boxing Day sales,shopping,8,20
+2025-12-31,New Year's Eve,celebration,17,23
+2026-01-01,New Year's Eve (after midnight),celebration,0,2
+2026-09-25,AFL Grand Final parade,sport,8,18
+2026-09-26,AFL Grand Final day,sport,10,21
+2026-12-26,Boxing Day sales,shopping,8,20
+2026-12-31,New Year's Eve,celebration,17,23
+2027-01-01,New Year's Eve (after midnight),celebration,0,2
+2027-09-24,AFL Grand Final parade,sport,8,18
+2027-09-25,AFL Grand Final day,sport,10,21
+2027-12-26,Boxing Day sales,shopping,8,20
+2027-12-31,New Year's Eve,celebration,17,23

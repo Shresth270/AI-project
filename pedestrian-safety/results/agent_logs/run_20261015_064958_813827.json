@@ -1,0 +1,93 @@
+{
+  "answer": "RISK: \ud83d\udfe2 Normal\nSITUATION: Sensor model forecasts Medium for the next hour.\nEVIDENCE:\n- Sensor Swa31 at 2026-09-26 15:00: forecast Medium (P(Very High) = 2%); usual 3558 people/hour, last hour 2196.\nACTIONS:\n- Continue routine monitoring.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-2",
+        "when": "2026-09-26 15:00"
+      },
+      "result": {
+        "sensor": "Swa31",
+        "forecast_for_hour": "2026-09-26 15:00",
+        "weekday": "Saturday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "Medium",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.742,
+          "High": 0.239,
+          "Very High": 0.018
+        },
+        "p_very_high": 0.018,
+        "warning_threshold": 0.2,
+        "early_warning": false,
+        "usual_people_this_hour": 3558.0,
+        "very_high_line_people_per_hour": 3684.0,
+        "people_1h_before": 2196.0,
+        "people_2h_before": 2133.0,
+        "people_3h_before": 2459.0,
+        "same_hour_last_week": 3715.0,
+        "last_hour_vs_usual": 0.625,
+        "last_hour_level": "Medium",
+        "event": "AFL Grand Final day",
+        "public_holiday": null,
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null,
+        "forecast_level": "Medium",
+        "p_very_high": 0.018
+      },
+      "result": {
+        "risk_level": "Normal",
+        "icon": "\ud83d\udfe2",
+        "risk_code": 0,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts Medium for the next hour."
+        ],
+        "actions": [
+          "Continue routine monitoring."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": "Medium",
+          "p_very_high": 0.018,
+          "surge_ratio": null
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Normal",
+    "icon": "\ud83d\udfe2",
+    "risk_code": 0,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts Medium for the next hour."
+    ],
+    "actions": [
+      "Continue routine monitoring."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": "Medium",
+      "p_very_high": 0.018,
+      "surge_ratio": null
+    }
+  },
+  "question": "Is CAM-2 safe at 2026-09-26 15:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": null,
+  "seconds": 96.0
+}

@@ -1,0 +1,119 @@
+{
+  "answer": "RISK: \ud83d\udfe1 Watch\nSITUATION: CAM-1 is expected to experience a Very High crowd level on New Year's Eve at 20:00, well above normal levels.\nEVIDENCE:\n- Forecast predicts Very High crowd level with 95% probability (0.948).\n- Crowd is surging at 2.2x the usual level for this hour.\n- New Year's Eve celebration event is active.\nACTIONS:\n- Send extra staff to the location and keep the camera under watch.\n- Prepare crowd barriers and announce alternative routes.\n- Re-check the camera every 10-15 minutes.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-1",
+        "when": "2025-12-31 20:00"
+      },
+      "result": {
+        "sensor": "Swa123_T",
+        "forecast_for_hour": "2025-12-31 20:00",
+        "weekday": "Wednesday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "Very High",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.011,
+          "High": 0.041,
+          "Very High": 0.948
+        },
+        "p_very_high": 0.948,
+        "warning_threshold": 0.2,
+        "early_warning": true,
+        "usual_people_this_hour": 1490.0,
+        "very_high_line_people_per_hour": 3864.75,
+        "people_1h_before": 4053.0,
+        "people_2h_before": 3840.0,
+        "people_3h_before": 3838.0,
+        "same_hour_last_week": 3932.0,
+        "last_hour_vs_usual": 2.186,
+        "last_hour_level": "Very High",
+        "event": "New Year's Eve",
+        "public_holiday": null,
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "get_events",
+      "args": {
+        "date": "2025-12-31"
+      },
+      "result": {
+        "date": "2025-12-31",
+        "weekday": "Wednesday",
+        "public_holiday": null,
+        "events": [
+          {
+            "event_name": "New Year's Eve",
+            "event_type": "celebration",
+            "start_hour": 17,
+            "end_hour": 23
+          }
+        ]
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "p_very_high": 0.948,
+        "forecast_level": "Very High",
+        "camera_id": "CAM-1",
+        "surge_ratio": 2.186
+      },
+      "result": {
+        "risk_level": "Watch",
+        "icon": "\ud83d\udfe1",
+        "risk_code": 1,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts a Very High crowd in the next hour (probability 95%).",
+          "Crowd is 2.2x the usual level for this time."
+        ],
+        "actions": [
+          "Send extra staff to the location and keep the camera under watch.",
+          "Prepare crowd barriers and announce alternative routes.",
+          "Re-check the camera every 10-15 minutes."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": 200.0,
+          "hidden_share": null,
+          "forecast_level": "Very High",
+          "p_very_high": 0.948,
+          "surge_ratio": 2.186
+        }
+      }
+    }
+  ],
+  "mode": "LLM (gemini-3.5-flash-lite)",
+  "risk": {
+    "risk_level": "Watch",
+    "icon": "\ud83d\udfe1",
+    "risk_code": 1,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts a Very High crowd in the next hour (probability 95%).",
+      "Crowd is 2.2x the usual level for this time."
+    ],
+    "actions": [
+      "Send extra staff to the location and keep the camera under watch.",
+      "Prepare crowd barriers and announce alternative routes.",
+      "Re-check the camera every 10-15 minutes."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": 200.0,
+      "hidden_share": null,
+      "forecast_level": "Very High",
+      "p_very_high": 0.948,
+      "surge_ratio": 2.186
+    }
+  },
+  "question": "Will CAM-1 be dangerously crowded at 2025-12-31 20:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": "2025-12-31T20:00",
+  "seconds": 9.3
+}

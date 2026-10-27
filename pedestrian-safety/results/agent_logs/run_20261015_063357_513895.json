@@ -1,0 +1,93 @@
+{
+  "answer": "RISK: \ud83d\udfe2 Normal\nSITUATION: Sensor model forecasts Low for the next hour.\nEVIDENCE:\n- Sensor SouthB_T at 2026-07-14 03:00: forecast Low (P(Very High) = 0%); usual 12 people/hour, last hour 16.\nACTIONS:\n- Continue routine monitoring.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-3",
+        "when": "2026-07-14 03:00"
+      },
+      "result": {
+        "sensor": "SouthB_T",
+        "forecast_for_hour": "2026-07-14 03:00",
+        "weekday": "Tuesday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "Low",
+        "probabilities": {
+          "Low": 1.0,
+          "Medium": 0.0,
+          "High": 0.0,
+          "Very High": 0.0
+        },
+        "p_very_high": 0.0,
+        "warning_threshold": 0.2,
+        "early_warning": false,
+        "usual_people_this_hour": 12.0,
+        "very_high_line_people_per_hour": 3389.0,
+        "people_1h_before": 16.0,
+        "people_2h_before": 18.0,
+        "people_3h_before": 18.0,
+        "same_hour_last_week": 6.0,
+        "last_hour_vs_usual": 0.895,
+        "last_hour_level": "Low",
+        "event": null,
+        "public_holiday": null,
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null,
+        "forecast_level": "Low",
+        "p_very_high": 0.0
+      },
+      "result": {
+        "risk_level": "Normal",
+        "icon": "\ud83d\udfe2",
+        "risk_code": 0,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts Low for the next hour."
+        ],
+        "actions": [
+          "Continue routine monitoring."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": "Low",
+          "p_very_high": 0.0,
+          "surge_ratio": null
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Normal",
+    "icon": "\ud83d\udfe2",
+    "risk_code": 0,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts Low for the next hour."
+    ],
+    "actions": [
+      "Continue routine monitoring."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": "Low",
+      "p_very_high": 0.0,
+      "surge_ratio": null
+    }
+  },
+  "question": "How busy will CAM-3 be at 2026-07-14 03:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": null,
+  "seconds": 0.0
+}

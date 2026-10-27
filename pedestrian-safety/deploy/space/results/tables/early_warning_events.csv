@@ -1,0 +1,3 @@
+date,event,sensor_hours,very_high_hours,caught_by_model,caught_by_usual_rule,onsets,onsets_warned_by_model
+2026-09-25,AFL Grand Final parade,1071,184,0.7336956521739131,0.03804347826086957,67,31
+2026-09-26,AFL Grand Final day,1168,64,0.6875,0.15625,33,14

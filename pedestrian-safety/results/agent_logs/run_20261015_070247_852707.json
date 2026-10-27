@@ -1,0 +1,93 @@
+{
+  "answer": "RISK: \ud83d\udfe2 Normal\nSITUATION: Sensor model forecasts High for the next hour.\nEVIDENCE:\n- Sensor Swa31 at 2026-11-15 12:00: forecast High (P(Very High) = 1%); usual 3158 people/hour, last hour 2482.\nACTIONS:\n- Continue routine monitoring.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-2",
+        "when": "2026-11-15 12:00"
+      },
+      "result": {
+        "sensor": "Swa31",
+        "forecast_for_hour": "2026-11-15 12:00",
+        "weekday": "Sunday",
+        "mode": "planning (future time: assumes normal recent counts)",
+        "predicted_level": "High",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.07,
+          "High": 0.919,
+          "Very High": 0.01
+        },
+        "p_very_high": 0.01,
+        "warning_threshold": 0.2,
+        "early_warning": false,
+        "usual_people_this_hour": 3158.0,
+        "very_high_line_people_per_hour": 3684.0,
+        "people_1h_before": 2482.0,
+        "people_2h_before": 1765.0,
+        "people_3h_before": 1027.0,
+        "same_hour_last_week": 3158.0,
+        "last_hour_vs_usual": 1.0,
+        "last_hour_level": "Medium",
+        "event": null,
+        "public_holiday": null,
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null,
+        "forecast_level": "High",
+        "p_very_high": 0.01
+      },
+      "result": {
+        "risk_level": "Normal",
+        "icon": "\ud83d\udfe2",
+        "risk_code": 0,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts High for the next hour."
+        ],
+        "actions": [
+          "Continue routine monitoring."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": "High",
+          "p_very_high": 0.01,
+          "surge_ratio": null
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Normal",
+    "icon": "\ud83d\udfe2",
+    "risk_code": 0,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts High for the next hour."
+    ],
+    "actions": [
+      "Continue routine monitoring."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": "High",
+      "p_very_high": 0.01,
+      "surge_ratio": null
+    }
+  },
+  "question": "Plan ahead: crowd level at CAM-2 on 2026-11-15 12:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": null,
+  "seconds": 92.7
+}

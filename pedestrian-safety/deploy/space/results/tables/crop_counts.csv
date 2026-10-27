@@ -1,0 +1,5 @@
+class,train,val,test
+pedestrian,6000,1200,1500
+rider,644,100,105
+partially_visible,6000,1200,1500
+background,6000,1200,1500

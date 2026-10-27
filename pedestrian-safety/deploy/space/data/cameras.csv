@@ -1,0 +1,7 @@
+camera_id,camera_name,sensor_id,sensor_name,visible_area_m2
+CAM-1,Camera 1 near sensor Swa123_T,4,Swa123_T,200
+CAM-2,Camera 2 near sensor Swa31,41,Swa31,200
+CAM-3,Camera 3 near sensor SouthB_T,35,SouthB_T,200
+CAM-4,Camera 4 near sensor QVN_T,66,QVN_T,200
+CAM-5,Camera 5 near sensor ElFi_T,84,ElFi_T,200
+CAM-6,Camera 6 near sensor Swa295_T,3,Swa295_T,200

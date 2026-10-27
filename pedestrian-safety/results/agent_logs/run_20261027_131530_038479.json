@@ -1,0 +1,57 @@
+{
+  "answer": "RISK: \ud83d\udfe2 Normal\nSITUATION: No camera or sensor evidence was provided.\nEVIDENCE:\n\nACTIONS:\n- Continue routine monitoring.",
+  "steps": [
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null
+      },
+      "result": {
+        "risk_level": "Normal",
+        "icon": "\ud83d\udfe2",
+        "risk_code": 0,
+        "density_per_m2": null,
+        "reasons": [
+          "No camera or sensor evidence was provided."
+        ],
+        "actions": [
+          "Continue routine monitoring."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": null,
+          "p_very_high": null,
+          "surge_ratio": null
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Normal",
+    "icon": "\ud83d\udfe2",
+    "risk_code": 0,
+    "density_per_m2": null,
+    "reasons": [
+      "No camera or sensor evidence was provided."
+    ],
+    "actions": [
+      "Continue routine monitoring."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": null,
+      "p_very_high": null,
+      "surge_ratio": null
+    }
+  },
+  "question": "Which cameras can you monitor?",
+  "image_path": null,
+  "camera_id": null,
+  "when": "2026-09-25T11:00",
+  "seconds": 10.5
+}

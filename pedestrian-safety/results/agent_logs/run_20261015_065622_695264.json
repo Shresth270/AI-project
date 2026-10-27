@@ -1,0 +1,100 @@
+{
+  "answer": "RISK: \ud83d\udfe1 Watch\nSITUATION: Sensor model forecasts a Very High crowd in the next hour (probability 24%). Crowd is 1.2x the usual level for this time.\nEVIDENCE:\n- Sensor Swa295_T at 2026-10-11 18:00: forecast High (P(Very High) = 24%); usual 2008 people/hour, last hour 2654.\nACTIONS:\n- Send extra staff to the location and keep the camera under watch.\n- Prepare crowd barriers and announce alternative routes.\n- Re-check the camera every 10-15 minutes.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "location": "CAM-6",
+        "when": "2026-10-11 18:00"
+      },
+      "result": {
+        "sensor": "Swa295_T",
+        "forecast_for_hour": "2026-10-11 18:00",
+        "weekday": "Sunday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "High",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.024,
+          "High": 0.742,
+          "Very High": 0.235
+        },
+        "p_very_high": 0.235,
+        "warning_threshold": 0.2,
+        "early_warning": true,
+        "usual_people_this_hour": 2008.0,
+        "very_high_line_people_per_hour": 2719.0,
+        "people_1h_before": 2654.0,
+        "people_2h_before": 2707.0,
+        "people_3h_before": 3006.0,
+        "same_hour_last_week": 2511.0,
+        "last_hour_vs_usual": 1.224,
+        "last_hour_level": "High",
+        "event": null,
+        "public_holiday": null,
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "camera_id": null,
+        "forecast_level": "High",
+        "p_very_high": 0.235,
+        "surge_ratio": 1.22
+      },
+      "result": {
+        "risk_level": "Watch",
+        "icon": "\ud83d\udfe1",
+        "risk_code": 1,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts a Very High crowd in the next hour (probability 24%).",
+          "Crowd is 1.2x the usual level for this time."
+        ],
+        "actions": [
+          "Send extra staff to the location and keep the camera under watch.",
+          "Prepare crowd barriers and announce alternative routes.",
+          "Re-check the camera every 10-15 minutes."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": null,
+          "hidden_share": null,
+          "forecast_level": "High",
+          "p_very_high": 0.235,
+          "surge_ratio": 1.22
+        }
+      }
+    }
+  ],
+  "mode": "offline plan",
+  "risk": {
+    "risk_level": "Watch",
+    "icon": "\ud83d\udfe1",
+    "risk_code": 1,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts a Very High crowd in the next hour (probability 24%).",
+      "Crowd is 1.2x the usual level for this time."
+    ],
+    "actions": [
+      "Send extra staff to the location and keep the camera under watch.",
+      "Prepare crowd barriers and announce alternative routes.",
+      "Re-check the camera every 10-15 minutes."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": null,
+      "hidden_share": null,
+      "forecast_level": "High",
+      "p_very_high": 0.235,
+      "surge_ratio": 1.22
+    }
+  },
+  "question": "Is anything unusual expected at CAM-6 at 2026-10-11 18:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": null,
+  "seconds": 92.0
+}

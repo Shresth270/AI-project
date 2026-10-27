@@ -1,0 +1,93 @@
+{
+  "answer": "RISK: \ud83d\udfe2 Normal\nSITUATION: CAM-1 is forecasted to have a Medium crowd level at 11:00 on 2026-09-25, with no early warning triggered.\nEVIDENCE:\n- Predicted crowd level: Medium (probability 0.637)\n- Probability of Very High crowd: 0.002\n- Usual people this hour: 2364.5\nACTIONS: Continue routine monitoring.",
+  "steps": [
+    {
+      "tool": "forecast_footfall",
+      "args": {
+        "when": "2026-09-25 11:00",
+        "location": "CAM-1"
+      },
+      "result": {
+        "sensor": "Swa123_T",
+        "forecast_for_hour": "2026-09-25 11:00",
+        "weekday": "Friday",
+        "mode": "replay (uses the real counts of the previous hours)",
+        "predicted_level": "Medium",
+        "probabilities": {
+          "Low": 0.0,
+          "Medium": 0.637,
+          "High": 0.36,
+          "Very High": 0.002
+        },
+        "p_very_high": 0.002,
+        "warning_threshold": 0.2,
+        "early_warning": false,
+        "usual_people_this_hour": 2364.5,
+        "very_high_line_people_per_hour": 3864.75,
+        "people_1h_before": 1956.0,
+        "people_2h_before": 1522.0,
+        "people_3h_before": 659.0,
+        "same_hour_last_week": 2200.0,
+        "last_hour_vs_usual": 1.112,
+        "last_hour_level": "Medium",
+        "event": "AFL Grand Final parade",
+        "public_holiday": "Friday before the AFL Grand Final",
+        "model": "XGBoost"
+      }
+    },
+    {
+      "tool": "assess_risk",
+      "args": {
+        "forecast_level": "Medium",
+        "p_very_high": 0.002,
+        "camera_id": "CAM-1"
+      },
+      "result": {
+        "risk_level": "Normal",
+        "icon": "\ud83d\udfe2",
+        "risk_code": 0,
+        "density_per_m2": null,
+        "reasons": [
+          "Sensor model forecasts Medium for the next hour."
+        ],
+        "actions": [
+          "Continue routine monitoring."
+        ],
+        "inputs": {
+          "people_count": null,
+          "area_m2": 200.0,
+          "hidden_share": null,
+          "forecast_level": "Medium",
+          "p_very_high": 0.002,
+          "surge_ratio": null
+        }
+      }
+    }
+  ],
+  "mode": "LLM (gemini-3.5-flash-lite)",
+  "risk": {
+    "risk_level": "Normal",
+    "icon": "\ud83d\udfe2",
+    "risk_code": 0,
+    "density_per_m2": null,
+    "reasons": [
+      "Sensor model forecasts Medium for the next hour."
+    ],
+    "actions": [
+      "Continue routine monitoring."
+    ],
+    "inputs": {
+      "people_count": null,
+      "area_m2": 200.0,
+      "hidden_share": null,
+      "forecast_level": "Medium",
+      "p_very_high": 0.002,
+      "surge_ratio": null
+    }
+  },
+  "question": "Will CAM-1 be dangerously crowded at 2026-09-25 11:00?",
+  "image_path": null,
+  "camera_id": null,
+  "when": "2026-09-25T11:00",
+  "seconds": 7.6
+}

@@ -1,0 +1,12 @@
+Best model: XGBoost
+
+              precision    recall  f1-score   support
+
+         Low      0.898     0.902     0.900     80790
+      Medium      0.885     0.874     0.880    148380
+        High      0.749     0.764     0.756     58403
+   Very High      0.649     0.664     0.656     14821
+
+    accuracy                          0.850    302394
+   macro avg      0.796     0.801     0.798    302394
+weighted avg      0.851     0.850     0.850    302394
